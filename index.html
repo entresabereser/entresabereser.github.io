@@ -1,168 +1,414 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#3b2113" />
-  <meta name="description" content="Entre Saber e Ser — Grandes perguntas. Diferentes perspectivas." />
-  <title>Entre Saber e Ser</title>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Entre Saber e Ser — com Cris Esteves</title>
+
+  <meta
+    name="description"
+    content="Podcast com Cris Esteves sobre filosofia, ciência e espiritualidade. Episódios novos toda quinta."
+  />
+
+  <meta property="og:title" content="Entre Saber e Ser — com Cris Esteves" />
+
+  <meta
+    property="og:description"
+    content="Podcast com Cris Esteves sobre filosofia, ciência e espiritualidade. Episódios novos toda quinta."
+  />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Entre Saber e Ser" />
+
+  <meta name="theme-color" content="#D9D2C6" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PodcastSeries",
+    "name": "Entre Saber e Ser",
+    "url": "https://entresabereser.com.br/",
+    "description": "Podcast com Cris Esteves sobre filosofia, ciência e espiritualidade. Episódios novos toda quinta.",
+    "inLanguage": "pt-BR",
+    "author": {
+      "@type": "Person",
+      "name": "Cris Esteves"
+    }
+  }
+  </script>
 
   <style>
     :root {
-      --bg1:#D9CFC1;
-      --bg2:#D9CFC1;
-      --gold:#C4791C;
-      --gold2:#22558C;
-    
-      --muted:#6B6A66;
-      --card:#D9CFC1;
-      --line:#E4DEE4;
+      --bg: #D9D2C6;
+      --primary: #22558C;
+      --secondary: #6B6A66;
+      --accent: #C4791C;
+      --serif: "Lora", Georgia, serif;
+      --sans: "Inter", Arial, sans-serif;
     }
-    * { box-sizing:border-box; }
-    html,body { margin:0; min-height:100%; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      min-height:100vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color:#1C1B19;
-      background:#D9CFC1;
-        
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:28px 18px;
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--secondary);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
+
     main {
-      width:min(100%, 560px);
+      width: min(100% - 40px, 640px);
       margin: 0 auto;
-      text-align:center;
+      padding: 72px 0 56px;
+      text-align: center;
     }
-    .card {
-      background:var(--card);
-      border:1px solid rgba(107,106,102,.18);      
-      border-radius:28px;
-      padding:34px 24px 28px;
-      
-    
-      box-shadow:0 12px 34px rgba(0,0,0,.10);   
+
+    .symbol {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 26px;
     }
-.logo {
-  width:100%;
-  max-width:165px;
-  height:auto;
-  object-fit:contain;
-  object-position:center;
-  border-radius:0;
-  box-shadow:none;
-  margin-bottom:18px;
-}
+
+    .symbol svg {
+      display: block;
+      width: min(260px, 78vw);
+      height: auto;
+    }
+
     h1 {
-  margin:0;
-  font-family: "Lora",
-    , serif;
-  font-size:42px;
-  font-weight:500;
-  color:#22558C;
-  letter-spacing:.02em;
-}
-
-.host {
-  margin:8px 0 18px;
-  font-family:"Lora", Georgia, serif;
-  font-size:18px;
-  color:#6B6A66;
-  font-weight:400;
-}
-    .tagline {
-      margin:10px auto 26px;
-      color:#6B6A66;      font-size:16px;
-      line-height:1.5;
-      max-width:390px;
+      margin: 0;
+      color: var(--primary);
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 8vw, 4rem);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
     }
-    .links {
-      display:grid;
-      gap:14px;
+
+    .subtitle {
+      margin: 10px 0 0;
+      color: var(--primary);
+      font-family: var(--serif);
+      font-size: clamp(1.05rem, 4vw, 1.35rem);
+      font-weight: 400;
     }
-    a.button {
-      display:block;
-      text-decoration:none;
-      color:#FFFFFF;
-      background:#22558C;
-      padding:16px 20px;
-      border-radius:16px;
-      font-weight:700;
-      font-size:17px;
-      letter-spacing:.01em;
-      box-shadow:0 8px 22px rgba(0,0,0,.18);
-      transition:transform .15s ease, filter .15s ease;
+
+    .quote {
+      margin: 34px auto 0;
+      color: var(--primary);
+      font-family: var(--serif);
+      font-size: clamp(1.2rem, 4.5vw, 1.55rem);
+      line-height: 1.5;
+      font-style: italic;
     }
-    a.button:hover {
-      transform:translateY(-2px);
-      filter:brightness(1.04);
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin: 34px 0 0;
     }
-    .secondary {
-      margin-top:22px;
-      font-size:13px;
-      color:#6B6A66;
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 20px;
+      border: 1.5px solid var(--primary);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--primary);
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1;
+      text-decoration: none;
+      transition:
+        background-color 160ms ease,
+        color 160ms ease,
+        transform 160ms ease;
     }
-@media (max-width:480px) {
-    body { min-height:100svh; place-items:center; }  
-  main {
-  transform:translateY(-60px);
-}
-  .card {
-  padding:24px 16px 24px;
-  
-}
 
-.logo {
-  width:100%;
-  max-width:190px;
-  height:auto;
-  object-fit:contain;
-}
-  margin-bottom:24px;
-}
+    .button:hover,
+    .button:focus-visible {
+      background: var(--primary);
+      color: var(--bg);
+    }
 
-h1 {
-  font-size:32px;
-  margin:0 0 18px;
-}
+    .button:focus-visible {
+      outline: 3px solid rgba(34, 85, 140, 0.2);
+      outline-offset: 3px;
+    }
 
-.tagline {
-  font-size:15px;
-  margin:0 auto 30px;
-}
+    .button:active {
+      transform: translateY(1px);
+    }
 
-.host {
-  font-size:17px;
-  margin:0 0 28px;
-}
+    .about {
+      margin: 52px auto 0;
+      max-width: 600px;
+      text-align: left;
+      font-size: 0.98rem;
+      line-height: 1.8;
+    }
 
-a.button {
-  padding:14px 18px;
-  font-size:16px;
-}
+    .about p {
+      margin: 0;
+    }
 
-.secondary {
-  margin-top:24px;
-  font-size:12px;
-}
+    .about p + p {
+      margin-top: 22px;
+    }
+
+    .contact {
+      margin: 44px 0 0;
+      padding-top: 28px;
+      border-top: 1px solid rgba(34, 85, 140, 0.22);
+      font-size: 0.9rem;
+    }
+
+    .contact a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contact a:hover,
+    .contact a:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 520px) {
+      main {
+        width: min(100% - 28px, 640px);
+        padding: 48px 0 38px;
+      }
+
+      .symbol {
+        margin-bottom: 22px;
+      }
+
+      .quote {
+        margin-top: 28px;
+      }
+
+      .actions {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 28px;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .about {
+        margin-top: 42px;
+        font-size: 0.95rem;
+        line-height: 1.72;
+      }
+
+      .contact {
+        margin-top: 36px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
   </style>
-  </head>
-<body>
-  <main>
-    <section class="card">
-<img class="logo" src="Logo_Entre_Saber_e_Ser_SIMBOLO_CLARO_TRANSPARENTE_EXATO.png" alt="Entre Saber e Ser" />
-      <h1>Entre Saber e Ser</h1>
-      <p class="host">com Cris Esteves</p>      <div class="links">
-        <a class="button" href=https://www.youtube.com/channel/UCTxfNAyvmv6er47hB2EKfag " target="_blank" rel="noopener">Assistir no YouTube</a>
-        <a class="button" href=https://open.spotify.com/show/0343iheVfr87E5h7yomJvY target="_blank" rel="noopener">Ouvir no Spotify</a>
-      </div>
+</head>
 
-      <p class="secondary">Filosofia • Espiritualidade • Psicologia • Ciência</p>
+<body>
+
+  <main>
+
+    <div class="symbol" aria-hidden="true">
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 300 70"
+        width="260"
+      >
+
+        <circle
+          cx="25.75"
+          cy="35"
+          r="22.75"
+          fill="none"
+          stroke="#22558C"
+          stroke-width="6"
+        />
+
+        <circle
+          cx="66"
+          cy="35"
+          r="3"
+          fill="#22558C"
+        />
+
+        <line
+          x1="78"
+          y1="35"
+          x2="84"
+          y2="35"
+          stroke="#22558C"
+          stroke-width="6"
+          stroke-linecap="round"
+        />
+
+        <line
+          x1="94"
+          y1="35"
+          x2="106"
+          y2="35"
+          stroke="#22558C"
+          stroke-width="6"
+          stroke-linecap="round"
+        />
+
+        <line
+          x1="116"
+          y1="35"
+          x2="136"
+          y2="35"
+          stroke="#22558C"
+          stroke-width="6"
+          stroke-linecap="round"
+        />
+
+        <line
+          x1="146"
+          y1="35"
+          x2="176"
+          y2="35"
+          stroke="#22558C"
+          stroke-width="6"
+          stroke-linecap="round"
+        />
+
+        <line
+          x1="186"
+          y1="35"
+          x2="221"
+          y2="35"
+          stroke="#22558C"
+          stroke-width="6"
+          stroke-linecap="round"
+        />
+
+        <circle
+          cx="267.5"
+          cy="35"
+          r="32.5"
+          fill="#C4791C"
+        />
+
+      </svg>
+
+    </div>
+
+
+    <h1>Entre Saber e Ser</h1>
+
+    <p class="subtitle">
+      com Cris Esteves
+    </p>
+
+
+    <p class="quote">
+      Formular a pergunta já é ter a resposta.
+    </p>
+
+
+    <div
+      class="actions"
+      aria-label="Ouça ou assista ao podcast"
+    >
+
+      <a
+        class="button"
+        href="https://www.youtube.com/channel/UCTxFNAyvmv6er47hB2EKfag"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Assistir no YouTube
+      </a>
+
+
+      <a
+        class="button"
+        href="https://open.spotify.com/show/0343iheVfr87E5h7yomJvY"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ouvir no Spotify
+      </a>
+
+    </div>
+
+
+    <section
+      class="about"
+      aria-label="Sobre o podcast e Cris Esteves"
+    >
+
+      <p>
+        Entre Saber e Ser é um podcast apresentado por Cris Esteves
+        sobre a distância entre o que a gente sabe e o que a gente vive.
+        Filosofia, ciência e espiritualidade, para quem também está
+        procurando. Episódios novos toda quinta-feira.
+      </p>
+
+      <p>
+        Cris Esteves é brasileira, nascida em São Paulo.
+        Estuda filosofia desde os anos 1980, é terapeuta e formada
+        em coaching. Autora de 3 livros. Vive na Flórida,
+        nos Estados Unidos, desde 2023.
+      </p>
+
     </section>
+
+
+    <p class="contact">
+
+      Contato:
+
+      <a
+        href="https://www.instagram.com/entresabereser/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        @entresabereser
+      </a>
+
+    </p>
+
   </main>
+
 </body>
 </html>
