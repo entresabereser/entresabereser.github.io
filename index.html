@@ -198,9 +198,15 @@
       text-decoration: underline;
       text-underline-offset: 3px;
     }
+.mobile-break {
+  display: none;
+}
 
-    @media (max-width: 520px) {
-      main {
+@media (max-width: 520px) {  
+  .mobile-break {
+  display: block;
+}      
+  main {
         width: min(100% - 28px, 640px);
         padding: 48px 0 38px;
       }
@@ -341,10 +347,9 @@
 
 
     <p class="quote">
-      Formular a pergunta já é ter a resposta.
-    </p>
-
-
+  Se você conseguiu formular a pergunta,<br class="mobile-break">
+  a resposta já está em você.
+</p>
     <div
       class="actions"
       aria-label="Ouça ou assista ao podcast"
