@@ -118,6 +118,7 @@
       font-size: clamp(1.2rem, 4.5vw, 1.55rem);
       line-height: 1.5;
       font-style: italic;
+      text-wrap: balance;
     }
 
     .actions {
@@ -125,7 +126,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
-      margin: 34px 0 0;
+      margin: 42px 0 0;
     }
 
     .button {
@@ -198,15 +199,9 @@
       text-decoration: underline;
       text-underline-offset: 3px;
     }
-.mobile-break {
-  display: none;
-}
 
-@media (max-width: 520px) {  
-  .mobile-break {
-  display: block;
-}      
-  main {
+    @media (max-width: 520px) {
+      main {
         width: min(100% - 28px, 640px);
         padding: 48px 0 38px;
       }
@@ -222,7 +217,7 @@
       .actions {
         flex-direction: column;
         align-items: stretch;
-        margin-top: 28px;
+        margin-top: 38px;
       }
 
       .button {
@@ -254,13 +249,11 @@
   <main>
 
     <div class="symbol" aria-hidden="true">
-
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 300 70"
         width="260"
       >
-
         <circle
           cx="25.75"
           cy="35"
@@ -333,11 +326,8 @@
           r="32.5"
           fill="#C4791C"
         />
-
       </svg>
-
     </div>
-
 
     <h1>Entre Saber e Ser</h1>
 
@@ -345,16 +335,15 @@
       com Cris Esteves
     </p>
 
-
     <p class="quote">
-  Se você conseguiu formular a pergunta,<br class="mobile-break">
-  a resposta já está em você.
-</p>
+      Se você conseguiu formular a pergunta,<br>
+      a resposta já está em você.
+    </p>
+
     <div
       class="actions"
       aria-label="Ouça ou assista ao podcast"
     >
-
       <a
         class="button"
         href="https://www.youtube.com/channel/UCTxFNAyvmv6er47hB2EKfag"
@@ -364,7 +353,6 @@
         Assistir no YouTube
       </a>
 
-
       <a
         class="button"
         href="https://open.spotify.com/show/0343iheVfr87E5h7yomJvY"
@@ -373,15 +361,12 @@
       >
         Ouvir no Spotify
       </a>
-
     </div>
-
 
     <section
       class="about"
       aria-label="Sobre o podcast e Cris Esteves"
     >
-
       <p>
         Entre Saber e Ser é um podcast apresentado por Cris Esteves
         sobre a distância entre o que a gente sabe e o que a gente vive.
@@ -395,12 +380,9 @@
         em coaching. Autora de 3 livros. Vive na Flórida,
         nos Estados Unidos, desde 2023.
       </p>
-
     </section>
 
-
     <p class="contact">
-
       Contato:
 
       <a
@@ -410,7 +392,6 @@
       >
         @entresabereser
       </a>
-
     </p>
 
   </main>
