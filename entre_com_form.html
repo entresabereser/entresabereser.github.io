@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Entre Saber e Ser — com Cris Esteves</title>
+
+  <meta
+    name="description"
+    content="Podcast com Cris Esteves sobre filosofia, ciência e espiritualidade. Episódios novos toda quinta."
+  />
+
+  <meta property="og:title" content="Entre Saber e Ser — com Cris Esteves" />
+
+  <meta
+    property="og:description"
+    content="Podcast com Cris Esteves sobre filosofia, ciência e espiritualidade. Episódios novos toda quinta."
+  />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Entre Saber e Ser" />
+
+  <meta name="theme-color" content="#D9D2C6" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PodcastSeries",
+    "name": "Entre Saber e Ser",
+    "url": "https://entresabereser.com.br/",
+    "description": "Podcast com Cris Esteves sobre filosofia, ciência e espiritualidade. Episódios novos toda quinta.",
+    "inLanguage": "pt-BR",
+    "author": {
+      "@type": "Person",
+      "name": "Cris Esteves"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #D9D2C6;
+      --primary: #22558C;
+      --secondary: #6B6A66;
+      --accent: #C4791C;
+      --serif: "Lora", Georgia, serif;
+      --sans: "Inter", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--secondary);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    main {
+      width: min(100% - 40px, 640px);
+      margin: 0 auto;
+      padding: 72px 0 56px;
+      text-align: center;
+    }
+
+    .symbol {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 26px;
+    }
+
+    .symbol svg {
+      display: block;
+      width: min(260px, 78vw);
+      height: auto;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--primary);
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 8vw, 4rem);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .subtitle {
+      margin: 10px 0 0;
+      color: var(--primary);
+      font-family: var(--serif);
+      font-size: clamp(1.05rem, 4vw, 1.35rem);
+      font-weight: 400;
+    }
+
+    .quote {
+      margin: 34px auto 0;
+      color: var(--primary);
+      font-family: var(--serif);
+      font-size: clamp(1.2rem, 4.5vw, 1.55rem);
+      line-height: 1.5;
+      font-style: italic;
+      text-wrap: balance;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin: 42px 0 0;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 20px;
+      border: 1.5px solid var(--primary);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--primary);
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1;
+      text-decoration: none;
+      transition:
+        background-color 160ms ease,
+        color 160ms ease,
+        transform 160ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: var(--primary);
+      color: var(--bg);
+    }
+
+    .button:focus-visible {
+      outline: 3px solid rgba(34, 85, 140, 0.2);
+      outline-offset: 3px;
+    }
+
+    .button:active {
+      transform: translateY(1px);
+    }
+
+    .about {
+      margin: 52px auto 0;
+      max-width: 600px;
+      text-align: left;
+      font-size: 0.98rem;
+      line-height: 1.8;
+    }
+
+    .about p {
+      margin: 0;
+    }
+
+    .about p + p {
+      margin-top: 22px;
+    }
+
+    .contact {
+      margin: 44px 0 0;
+      padding-top: 28px;
+      border-top: 1px solid rgba(34, 85, 140, 0.22);
+      font-size: 0.9rem;
+    }
+
+    .contact a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contact a:hover,
+    .contact a:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 520px) {
+      main {
+        width: min(100% - 28px, 640px);
+        padding: 48px 0 38px;
+      }
+
+      .symbol {
+        margin-bottom: 22px;
+      }
+
+      .quote {
+        margin-top: 28px;
+      }
+
+      .actions {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 38px;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .about {
+        margin-top: 42px;
+        font-size: 0.95rem;
+        line-height: 1.72;
+      }
+
+      .contact {
+        margin-top: 36px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+
+    .capture {
+      margin: 40px auto 0;
+      max-width: 400px;
+      padding: 20px 18px;
+      border-top: 1px solid rgba(34, 85, 140, 0.22);
+    }
+
+    .capture h2 {
+      margin: 0 0 6px;
+      color: var(--primary);
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+
+    .capture p {
+      margin: 0 0 14px;
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    .capture-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .capture-form input {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid rgba(34, 85, 140, 0.45);
+      border-radius: 999px;
+      background: #fff;
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      color: var(--secondary);
+    }
+
+    .capture-form input:focus {
+      outline: 2px solid rgba(34, 85, 140, 0.25);
+      outline-offset: 1px;
+      border-color: var(--primary);
+    }
+
+    .capture-form button {
+      margin-top: 2px;
+      min-height: 42px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 160ms ease;
+    }
+
+    .capture-form button:hover {
+      opacity: 0.88;
+    }
+
+    .capture-success {
+      display: none;
+      margin: 0;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <div class="symbol" aria-hidden="true">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 300 70"
+        width="260"
+      >
+        <circle
+          cx="25.75"
+          cy="35"
+          r="22.75"
+          fill="none"
+          stroke="#22558C"
+          stroke-width="6"
+        />
+
+        <circle
+          cx="66"
+          cy="35"
+          r="3"
+          fill="#22558C"
+        />
+
+        <line
+          x1="78"
+          y1="35"
+          x2="84"
+          y2="35"
+          stroke="#22558C"
+          stroke-width="6"
+          stroke-linecap="round"
+        />
+
+        <line
+          x1="94"
+          y1="35"
+          x2="106"
+          y2="35"
+          stroke="#22558C"
+          stroke-width="6"
+          stroke-linecap="round"
+        />
+
+        <line
+          x1="116"
+          y1="35"
+          x2="136"
+          y2="35"
+          stroke="#22558C"
+          stroke-width="6"
+          stroke-linecap="round"
+        />
+
+        <line
+          x1="146"
+          y1="35"
+          x2="176"
+          y2="35"
+          stroke="#22558C"
+          stroke-width="6"
+          stroke-linecap="round"
+        />
+
+        <line
+          x1="186"
+          y1="35"
+          x2="221"
+          y2="35"
+          stroke="#22558C"
+          stroke-width="6"
+          stroke-linecap="round"
+        />
+
+        <circle
+          cx="267.5"
+          cy="35"
+          r="32.5"
+          fill="#C4791C"
+        />
+      </svg>
+    </div>
+
+    <h1>Entre Saber e Ser</h1>
+
+    <p class="subtitle">
+      com Cris Esteves
+    </p>
+
+    <p class="quote">
+      Se você conseguiu formular a pergunta,<br>
+      a resposta já está em você.
+    </p>
+
+    <div
+      class="actions"
+      aria-label="Ouça ou assista ao podcast"
+    >
+      <a
+        class="button"
+        href="https://www.youtube.com/channel/UCTxFNAyvmv6er47hB2EKfag"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Assistir no YouTube
+      </a>
+
+      <a
+        class="button"
+        href="https://open.spotify.com/show/0343iheVfr87E5h7yomJvY"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ouvir no Spotify
+      </a>
+    </div>
+
+    <section
+      class="about"
+      aria-label="Sobre o podcast e Cris Esteves"
+    >
+      <p>
+        Entre Saber e Ser é um podcast apresentado por Cris Esteves
+        sobre a distância entre o que a gente sabe e o que a gente vive.
+        Filosofia, ciência e espiritualidade, para quem também está
+        procurando. Episódios novos toda quinta-feira.
+      </p>
+
+      <p>
+        Cris Esteves é brasileira, nascida em São Paulo.
+        Estuda filosofia desde os anos 1980, é terapeuta e formada
+        em coaching. Autora de 3 livros. Vive na Flórida,
+        nos Estados Unidos, desde 2023.
+      </p>
+    </section>
+
+
+    <section class="capture" aria-label="Receba novidades por e-mail">
+      <h2>Receba novidades</h2>
+      <p>Deixe seu e-mail para acompanhar o Entre Saber e Ser.</p>
+      <form
+        class="capture-form"
+        id="captureForm"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSf-6JObuxhYjNrPcVuW1rZTSLQIlq20QZi_u4PEnDNuIEPdPg/formResponse"
+        method="POST"
+        target="capture_iframe"
+      >
+        <input type="text" name="entry.113509070" placeholder="Seu nome" required autocomplete="name" aria-label="Nome">
+        <input type="email" name="entry.1250634752" placeholder="Seu melhor e-mail" required autocomplete="email" aria-label="E-mail">
+        <button type="submit">Cadastrar</button>
+      </form>
+      <p class="capture-success" id="captureSuccess">Obrigada! Você está na lista.</p>
+    </section>
+    <iframe name="capture_iframe" id="capture_iframe" style="display:none" title="envio do formulário"></iframe>
+
+    <p class="contact">
+      Contato:
+
+      <a
+        href="https://www.instagram.com/entresabereser/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        @entresabereser
+      </a>
+    </p>
+
+  </main>
+
+
+  <script>
+    (function () {
+      var form = document.getElementById('captureForm');
+      var success = document.getElementById('captureSuccess');
+      var sent = false;
+      form.addEventListener('submit', function () { sent = true; });
+      document.getElementById('capture_iframe').addEventListener('load', function () {
+        if (sent) {
+          form.style.display = 'none';
+          success.style.display = 'block';
+          sent = false;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
